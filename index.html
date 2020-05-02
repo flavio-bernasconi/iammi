@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="first-section">
+      <h1>it's iammi.</h1>
+      <div class="c-scrolldown">
+        <div class="c-line"></div>
+      </div>
+    </section>
+    <section class="first-section">
+      <p id="clip">NEW PROJECT</p>
+
+      <div class="img-section-one">
+        <img class="img" src="img.jpg" />
+        <img class="img" src="chair.jpg" />
+      </div>
+
+      <p class="split">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+        bibendum ipsum et velit fermentum suscipit. Pellentesque volutpat
+        lobortis diam. Nulla facilisi. Nulla consectetur lorem at mattis
+        fermentum. Sed vulputate dapibus velit, ac eleifend eros commodo quis.
+        In vel quam ut diam venenatis consequat sit amet eu neque. Donec porta
+        lacus a ullamcorper tristique. Sed feugiat ullamcorper lorem sed tempor.
+        Ut vitae congue est. Pellentesque congue a ante in fringilla. Donec vel
+        lectus in massa faucibus tincidunt id ut ex. Sed ac est ut ipsum commodo
+        suscipit at non urna. Nunc vel blandit quam. Duis quis vulputate nisi.
+        Nulla facilisi.
+      </p>
+      <div class="slider">
+        <a data-fancybox="gallery" href="zoom.jpg"
+          ><img class="small" src="zoom.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="img.jpg"
+          ><img class="small" src="img.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="chair.jpg"
+          ><img class="small" src="chair.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="zoom.jpg"
+          ><img class="small" src="zoom.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="img.jpg"
+          ><img class="small" src="img.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="chair.jpg"
+          ><img class="small" src="chair.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="zoom.jpg"
+          ><img class="small" src="zoom.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="img.jpg"
+          ><img class="small" src="img.jpg"
+        /></a>
+        <a data-fancybox="gallery" href="chair.jpg"
+          ><img class="small" src="chair.jpg"
+        /></a>
+      </div>
+    </section>
+
+    <svg viewBox="0 0 700 500">
+      <path
+        id="square"
+        fill="#fff"
+        stroke="#fff"
+        d="M33.5 39.5v300h437v-300h-437"
+      />
+      <text y="40" font-size="11" fill="gray">
+        <textPath id="path" class="text-svg" href="#square">
+          Yes it is Yes it is Yes it is Yes it is
+        </textPath>
+      </text>
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script>
+      const path = document.querySelector("#path");
+
+      function updateOffset(offset) {
+        path.setAttribute("startOffset", offset);
+      }
+
+      function onScroll() {
+        requestAnimationFrame(function () {
+          updateOffset(window.scrollY * 0.9);
+        });
+      }
+
+      window.addEventListener("scroll", onScroll);
+    </script>
+  </body>
+</html>
